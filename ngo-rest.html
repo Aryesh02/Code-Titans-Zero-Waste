@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Available Restaurants</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <table class="table table-dark">
+            <thead>
+                <th>Name</th>
+                <th>Type Of Food</th>
+                <th>Quantity</th>
+                <th>Phone Number</th>
+                <th>Location</th>
+            </thead>
+            <tbody id="tbody1"></tbody>
+        </table>
+    </div>
+
+    <script type="module">
+        function addItemtoTable(name,food,quantity,phone,location)
+        {
+            let tr = document.createElement("trow");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+            let td4 = document.createElement("td");
+            let td5 = document.createElement("td");
+
+            td1.innerHTML = name;
+            td1.innerHTML = food;
+            td1.innerHTML = quantity;
+            td1.innerHTML = phone;
+            td1.innerHTML = location;
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            tr.appendChild(td5);
+
+            tbody1.appendChild(tr);
+        }
+
+        function addAllItemstoTable(arr)
+        {
+            tbody1.innerHTML = "";
+            arr.forEach(element => {
+                addItemtoTable(element.name, element.food, element.quantity, element.phone, element.location);
+            });
+        }
+
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js'
+        import { getFirestore,collection, onSnapshot, getDocs, query, where } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js'
+
+const firebaseConfig = {
+    apiKey: "AIzaSyB5r0YXZTBV2ygS7cfiRl9U4olfHAmSHyU",
+    authDomain: "codetitans-trial.firebaseapp.com",
+    projectId: "codetitans-trial",
+    storageBucket: "codetitans-trial.appspot.com",
+    messagingSenderId: "481731453895",
+    appId: "1:481731453895:web:47882205200e8e3ca96fe2"
+  };
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore();
+
+
+        function getAllDataOnce()
+        {
+            const colref = collection(db,"donations");
+            const located = localStorage.getItem('location');
+            const q = query(colref,where('location','==',located));
+
+            onSnapshot(q, (querySnapshot) =>{
+                var x = [];
+                querySnapshot.forEach((doc) => {
+                const name = doc.data().name;
+                const quantity = doc.data().quantity;
+                const type = doc.data().food;
+                const phone = doc.data().phone;
+                const location = doc.data().location;
+                x.push(doc.data());
+            });
+            addAllItemstoTable(x);
+        })
+        }
+        window.onload = getAllDataOnce;
+    </script>
+</body>
+</html>
