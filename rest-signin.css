@@ -1,0 +1,58 @@
+form{
+    font-family:Audela;
+    font-size:40px;
+    border:3px solid black;
+    width:600px;
+    margin:100px auto;
+    color:crimson;
+   }
+   input[type="text"]
+   {
+    width:300px;
+    height:50px;
+    color:crimson;
+    
+   }
+   input[type="password"]
+   {
+    width:300px;
+    height:50px;
+    color:crimson;
+    
+   }
+   background
+   {
+    background-repeat:no-repeat;
+   }
+  #bs
+   {
+      width:200px;
+      height:50px;
+      font-size:28px;
+      color:black;
+      background-color:azure;
+      font-family:Orator Std;
+   }
+   #a{
+    color:blue;
+    font-size:20px;
+    position:absolute;
+    top:650px;
+    right:740px;
+   }
+   a:hover{
+    cursor:pointer;
+   }
+#bs:hover
+{
+background-color:rosybrown;
+cursor:pointer;
+}
+#b
+{
+    font-size:30px;
+    position:absolute;
+    top:600px;
+    right:600px;
+
+}

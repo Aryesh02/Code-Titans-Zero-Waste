@@ -1,0 +1,83 @@
+input[type="text"]
+    {
+        color:black;
+        height:32px;
+        width:220px;
+        border:2px solid black;
+        border-radius:60px;
+    }
+input[type="number"]
+{
+    color:black;
+    height:32px;
+    width:220px;
+    border:2px solid black;
+    border-radius:60px;
+}
+#pre
+{
+    height:58px;
+    width:320px;
+    font-size:20px;
+    border:2px solid black;
+    font-family:Orator Std;
+    margin:20px;
+    border-radius:60px;
+    margin-top: 200px;
+    margin-left: 42.5%;
+    padding:20px;
+}
+            
+#pre1
+{
+    width:320px;
+    padding:20px;
+    font-size:20px;
+    border:2px solid black;
+    font-family:Orator Std;
+    margin:20px;
+    border-radius:60px;
+    margin-top: 60px;
+    margin-left: 20%;
+    height:58px;
+}
+            
+#pre:hover{
+    cursor:pointer;
+    background-color:antiquewhite;
+}
+#pre1:hover{
+    cursor:pointer;
+    background-color:antiquewhite;
+}
+
+form
+{
+    margin:5px;
+    padding:5px 1px 1px;
+    font-family:Audela;
+    font-size:30px;
+    width:600px;
+    height:100px;
+    margin:100px auto;
+}
+#h{
+    position:relative;
+    text-align:center;
+    top:50px;
+    font-size:40px;
+    color:black;
+}
+#log
+{
+    position:relative; 
+    color:blue;
+    font-size:25px;
+    margin-left: 250px;
+}
+#log:hover{
+    cursor:pointer;
+}
+body{
+    background-attachment: fixed;
+}

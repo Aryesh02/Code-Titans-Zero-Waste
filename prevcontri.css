@@ -1,0 +1,12 @@
+.firebase{
+    display: flex;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 20px;
+    background-color: #f3ff71;
+    color: #0ba325;
+}
+
+.f{
+    flex-basis: 25%;
+}
