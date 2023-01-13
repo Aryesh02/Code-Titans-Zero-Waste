@@ -1,0 +1,54 @@
+#rest
+{
+    color:red;
+    position:relative;
+    font-size:30px;
+    font-style:helvetica;
+    bottom:-100px;
+    left:800px;
+}
+
+#b
+{
+    position:relative;
+    padding:20px;
+    font-size:25px;
+     bottom:-50px;
+    left:850px; 
+    background-color:lightcyan;
+    border-width:2.5px;
+    width:250px;
+    color:darkgreen;
+}
+
+#ng
+{
+    color:red;
+    position:relative;
+    font-size:30px;
+    font-style:helvetica;
+    bottom:-300px;
+    left:850px;
+}
+#u
+{
+    position:relative;
+    padding:20px;
+    font-size:25px;
+     bottom:-300px;
+    left:600px; 
+    background-color:lightcyan;
+    border-width:2.5px;
+    width:250px;
+    color:darkgreen;
+}
+#b:hover
+{
+    background-color:antiquewhite;
+    cursor:pointer;
+}
+#u:hover
+{
+    background-color:antiquewhite;
+    cursor:pointer;
+}
